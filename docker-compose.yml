@@ -1,0 +1,43 @@
+# enigma-poker/docker-compose.yml (Corrected for Volume Conflict)
+
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: enigma_db
+    restart: always
+    environment:
+      - POSTGRES_USER=enigma
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=enigma_poker
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    container_name: enigma_backend
+    build: ./backend
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app  # Backend hot-reloading is fine, we'll keep it.
+    depends_on:
+      - db
+
+  frontend:
+    container_name: enigma_frontend
+    build: ./frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    # The conflicting volume has been REMOVED.
+    # We no longer mount ./frontend:/app
+    # This ensures the container runs the code that was built into it.
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
