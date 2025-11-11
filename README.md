@@ -62,7 +62,7 @@ enigma/
 ## Requirements
 
 ### Backend
-*   Python 3.10+
+*   Python 3.10
 ```shell
 pip install -r backend/requirements.txt
 ```
@@ -155,3 +155,4 @@ These can be shared via Google Drive, Git LFS, or the HuggingFace Model Hub.
 # ♠ Play Smart. Learn Poker. Try to beat Enigma.
 In the words of one of the best ever wordsmiths and  GOAT, **Dwayne Michael Carter Jr.**, also known professionally as **Lil Wayne**:
 **"So misunderstood but what's the world without Enigma?"**
+
