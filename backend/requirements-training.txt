@@ -1,0 +1,8 @@
+numpy==1.26.4
+torch==2.1.0+cu121
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+gymnasium==0.29.1
+stable-baselines3==2.2.1
+tensorboard
+deuces==0.2.1

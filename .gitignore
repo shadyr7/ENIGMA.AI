@@ -1,0 +1,86 @@
+# ============================================================================
+# === GENERAL - OS / IDE / MISC
+# ============================================================================
+.DS_Store
+*.pem
+.idea/
+.vscode/
+*.suo
+*.user
+
+# ============================================================================
+# === PYTHON - Caches, Environments, Generated Files
+# ============================================================================
+**/venv/
+**/__pycache__/
+*.pyc
+.cache/
+*.log
+
+# Obsolete training folders
+/rltraining/
+
+# Backend build artifacts
+backend/__pycache__/
+backend/**/*.pyc
+
+# ============================================================================
+# === RL MODELS & LOGS (VERY IMPORTANT)
+# ============================================================================
+backend/models_enigma/
+backend/models/
+backend/eval_logs/
+backend/eval_VS_rule/
+backend/checkpoints/
+backend/tb_enigma/
+backend/rltrain/
+backend/training/
+backend/training_v2/
+backend/training_data/
+backend/run_logs/
+backend/replay_buffers/
+backend/tn/
+*.zip
+
+# ============================================================================
+# === NODE.JS / NEXT.JS - Dependencies & Builds
+# ============================================================================
+node_modules/
+frontend/node_modules/
+.pnp
+.pnp.*
+build/
+frontend/.next/
+frontend/out/
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local environment variables
+.env*
+!/.env.example
+backend/rltrain/
+rltrain/
+
+# TypeScript cache
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel deployment files
+.vercel
+
+# ============================================================================
+# === DOCKER
+# ============================================================================
+*.pid
+*~
+docker-data/
